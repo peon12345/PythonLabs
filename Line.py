@@ -1,4 +1,4 @@
-from MyPoint import Point
+from Point import Point
 
 
 class Line:

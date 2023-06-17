@@ -1,19 +1,19 @@
-from MyLine import Line
-from MyRect import Rect
-from MyPoint import Point
+from Line import Line
+from Rect import Rect
+from Point import Point
 from collections import deque
 
 
 class Lines:
 
     def __init__(self):
-        self._lines = deque()
+        self.__lines = list()
 
     def __iter__(self):
-        return self._lines.__iter__()
+        return self.__lines.__iter__()
 
     def add_line(self, line):
-        self._lines.append(line)
+        self.__lines.append(line)
 
     def add_bezier_curve(self, rect):
         t = 0.0

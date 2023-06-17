@@ -2,12 +2,19 @@ import pygame
 import Colors
 pygame.init()
 
-screen = pygame.display.set_mode((800, 600))
+
+offset = 5
+n = 2
+numbers = input().split()[:n]
+w = int(numbers[0])
+h = int(numbers[1])
+        
+screen = pygame.display.set_mode((w,h))
 
 screen.fill(Colors.YELLOW)
 
-pygame.draw.line(screen,Colors.BLACK, (0, 0), (800, 600), 7)
-pygame.draw.line(screen,Colors.BLACK, (800, 0), (0, 600), 7)
+pygame.draw.rect(screen, Colors.RED, pygame.Rect(offset, offset, w-offset * 2, h-offset * 2))
+
 
 while True:
         for event in pygame.event.get():

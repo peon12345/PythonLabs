@@ -1,0 +1,23 @@
+import pygame 
+import Colors
+pygame.init()
+
+
+print("Enter count ellipse: ")
+n_ellipse = input()
+
+
+screen = pygame.display.set_mode((300,300))
+screen.fill(Colors.BLACK)
+
+
+
+pygame.draw.ellipse(screen, Colors.WHITE, pygame.Surface((300,300)).get_rect(),1 )
+
+
+while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                quit()
+        pygame.display.update()
+        pygame.time.delay(1000)
