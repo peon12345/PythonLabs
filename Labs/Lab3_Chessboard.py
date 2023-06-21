@@ -29,6 +29,8 @@ for row in range(n_rect):
         pygame.draw.rect(screen, color, pygame.Rect(x_pos, y_pos, square_side, square_side))
         black_rect_draw_turn = not black_rect_draw_turn
         x_pos += square_side
+    if n_rect % 2 == 0:
+        black_rect_draw_turn = not black_rect_draw_turn
 
     y_pos += square_side
 
