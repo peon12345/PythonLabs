@@ -43,7 +43,7 @@ while True:
              screen.blit(balloons_img,(x,y),(200,200,w_balloon,h_balloon))
              ballons[i] = x,y
 
-        #destroyed_ballons[:] = [(x,y,frame) for (x,y,frame)  in destroyed_ballons if frame < 7]
+        
         destroyed_ballons[:] = [(x,y,frame) for (x,y,frame)  in destroyed_ballons if frame < 7]
 
         for i in range(len(destroyed_ballons)):

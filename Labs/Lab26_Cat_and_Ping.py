@@ -30,7 +30,6 @@ ball_points = []
 ball_points.append((280,100,3))
 ball_points.append((340,100,2))
 ball_points.append((600,380,2))
-#ball_points.append((550,430,3))
 ball_index = 0
 
 font = pygame.font.SysFont('Comic Sans MS', 40)
@@ -68,9 +67,6 @@ while True:
 
              if y_ball >= y and x_ball >= x:
                    ball_index += 1
-
-             #if abs(x_ball - x) <= s*3 and abs(y_ball - y) <= s*3:
-              #    ball_index += 1
              
 
 

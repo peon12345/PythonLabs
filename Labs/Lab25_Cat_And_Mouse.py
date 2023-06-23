@@ -51,7 +51,7 @@ y_cake = 60
 
 
 x_mouse = 200
-y_mouse = 220
+y_mouse = 240
 
 x_mouse_move = 0
 y_mouse_move = 0

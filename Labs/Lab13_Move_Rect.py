@@ -39,4 +39,4 @@ while True:
         pygame.draw.rect(screen,Colors.GREEN,(x_rect,y_rect,100,100))
 
         pygame.display.update()
-        pygame.time.delay(50)
+        pygame.time.delay(30)
