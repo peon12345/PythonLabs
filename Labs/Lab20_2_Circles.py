@@ -25,7 +25,7 @@ speed_c2 = 10
 
 c1_color = Colors.BLUE
 c2_color = Colors.RED
-
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -63,4 +63,4 @@ while True:
 
 
         pygame.display.update()
-        pygame.time.delay(50)
+        clock.tick(60)

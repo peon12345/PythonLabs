@@ -8,6 +8,7 @@ screen.fill(Colors.YELLOW)
 
 pygame.draw.line(screen,Colors.BLACK, (0, 0), (800, 600), 7)
 pygame.draw.line(screen,Colors.BLACK, (800, 0), (0, 600), 7)
+pygame.display.update()
 
 while True:
         for event in pygame.event.get():

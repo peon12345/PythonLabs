@@ -18,8 +18,8 @@ yellow_circle_y = random.randint(0, h_screen)
 
 max_distance = 20
 
-yellow_step = 5
-
+yellow_step = 3
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -44,4 +44,5 @@ while True:
              blue_circle_y = random.randint(0, h_screen)
 
         pygame.display.update()
-        pygame.time.delay(50)
+        #pygame.time.delay(50)
+        clock.tick(60)

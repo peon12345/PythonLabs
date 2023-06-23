@@ -26,7 +26,7 @@ x_hero_pos = 0
 y_hero_pos = 0
 
 image_is_flipped = False
-
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -72,4 +72,4 @@ while True:
 
 
         pygame.display.update()
-        pygame.time.delay(20)
+        clock.tick(30)

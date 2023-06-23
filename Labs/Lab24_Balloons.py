@@ -15,7 +15,7 @@ h_balloon = 90
 ballons = []
 destroyed_ballons = []
 
-
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -80,4 +80,4 @@ while True:
         
 
         pygame.display.update()
-        pygame.time.delay(100)
+        clock.tick(30)

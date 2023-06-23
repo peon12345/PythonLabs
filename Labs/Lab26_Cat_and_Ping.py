@@ -34,7 +34,7 @@ ball_index = 0
 
 font = pygame.font.SysFont('Comic Sans MS', 40)
 text = font.render("Поймал!", False, (200, 100, 100))
-
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -71,4 +71,4 @@ while True:
 
 
         pygame.display.update()
-        pygame.time.delay(50)
+        clock.tick(60)

@@ -6,8 +6,8 @@ screen = pygame.display.set_mode((600,600))
 
 x_circ = 0
 y_circ = 0
-circ_step = 10
-
+circ_step = 3
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -29,4 +29,4 @@ while True:
         pygame.draw.circle(screen,Colors.YELLOW,(x_circ,y_circ),30)
 
         pygame.display.update()
-        pygame.time.delay(100)
+        clock.tick(60)

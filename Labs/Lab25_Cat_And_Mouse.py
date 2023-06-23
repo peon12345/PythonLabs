@@ -66,6 +66,7 @@ x_cat_move = 1
 y_cat_move = 1
 w_cat = 40
 h_cat = 40
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -183,4 +184,4 @@ while True:
         screen.blit(cake_img,(x_cake,y_cake))
 
         pygame.display.update()
-        pygame.time.delay(20)
+        clock.tick(60)

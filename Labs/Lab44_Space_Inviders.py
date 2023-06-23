@@ -39,7 +39,7 @@ enemy_bullets = []
 rocket_bullets = []
 bullet_step = 15
 
-
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -114,4 +114,4 @@ while True:
 
 
         pygame.display.update()
-        pygame.time.delay(100)
+        clock.tick(25)

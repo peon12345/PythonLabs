@@ -14,6 +14,9 @@ car_img = pygame.transform.scale(car_img, (200, 100))
 tree_img = pygame.image.load("Labs/res/Tree_1.png")
 tree_img = pygame.transform.scale(tree_img, (50, 100))
 
+bush_img = pygame.image.load("Labs/res/Bush.png")
+bush_img = pygame.transform.scale(bush_img, (30, 30))
+
 wheel = pygame.image.load("Labs/res/wheel.png")
 wheel = pygame.transform.scale(wheel, (37, 37))
 
@@ -26,14 +29,14 @@ y_wheel_1 = 0
 
 
 
-trees = []
+trees_and_bushes = []
 
-
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 quit()
-        screen.fill(Colors.BLACK)
+        screen.fill(Colors.YELLOW)
 
         screen.blit(road_img,(-100,h/2 - 90))
         screen.blit(car_img,(w/2,h/2))
@@ -47,19 +50,25 @@ while True:
 
 
 
-        make_tree = random.randint(0,100)
-        if make_tree < 4:
+        make_obj = random.randint(0,100)
+        if make_obj < 4:
              y = random.randint(200,220)
-             trees.append((-50,y))
+             trees_and_bushes.append((-50,y,True))
+        elif make_obj >= 4 and make_obj <= 15:
+             y = random.randint(400,550)
+             trees_and_bushes.append((-50,y,False))
 
-        for i in range(len(trees)):
-             x,y = trees[i]
+        trees_and_bushes = trees_and_bushes[:] = [(x,y,is_tree) for (x,y,is_tree)  in trees_and_bushes if x < w]
+
+        for i in range(len(trees_and_bushes)):
+             x,y,is_tree = trees_and_bushes[i]
              if x < w:
                 x += 1
-                trees[i] = x,y
-                screen.blit(tree_img,(x,y))
-             else:
-                trees.remove(x)  
+                trees_and_bushes[i] = x,y,is_tree
+                if is_tree:
+                        screen.blit(tree_img,(x,y)) 
+                else:
+                        screen.blit(bush_img,(x,y))
 
         pygame.display.update()
-        pygame.time.delay(100)
+        clock.tick(60)

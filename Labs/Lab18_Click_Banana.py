@@ -31,14 +31,14 @@ def draw_bananas():
      for i in range(len(close_bananas_bounding_rects)):
           x,y,w,h = close_bananas_bounding_rects[i]
           screen.blit(close_banana_image,(x,y))
-          x += random.randint(-5,5)
+          x += random.randint(-2,2)
           close_bananas_bounding_rects[i] = x,y,w,h
 
 
      for x,y in open_bananas_pos:
           screen.blit(open_banana_image,(x,y))
 
-
+clock = pygame.time.Clock()
 while True:
         
         for event in pygame.event.get():
@@ -63,4 +63,4 @@ while True:
                               
         draw_bananas()         
         pygame.display.update()
-        pygame.time.delay(100)
+        clock.tick(30)

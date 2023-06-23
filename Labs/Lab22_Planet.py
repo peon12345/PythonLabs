@@ -48,7 +48,7 @@ current_index_point = 0
 step_rocket = 10
 
 rotate = False
-
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -99,4 +99,4 @@ while True:
         screen.blit(text,(0,0))
         
         pygame.display.update()
-        pygame.time.delay(200)
+        clock.tick(10)

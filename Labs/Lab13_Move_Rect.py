@@ -13,6 +13,7 @@ x_mouse_offset = 0
 y_mouse_offset = 0
 
 is_captured = False
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -39,4 +40,4 @@ while True:
         pygame.draw.rect(screen,Colors.GREEN,(x_rect,y_rect,100,100))
 
         pygame.display.update()
-        pygame.time.delay(30)
+        clock.tick(60)

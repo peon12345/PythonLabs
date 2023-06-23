@@ -11,7 +11,7 @@ banana_image = pygame.image.load("Labs/res/banana_2.png")
 banana_image = pygame.transform.scale(banana_image, (50, 50))
 
 bananas = []
-
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -28,10 +28,10 @@ while True:
         for i in range(len(bananas)):
              x,y = bananas[i]
              screen.blit(banana_image,(x,y))
-             y += 15
-             x += random.randint(-5, 5)
+             y += 3
+             x += random.randint(-2, 2)
              bananas[i] = x,y
         
 
         pygame.display.update()
-        pygame.time.delay(100)
+        clock.tick(60)

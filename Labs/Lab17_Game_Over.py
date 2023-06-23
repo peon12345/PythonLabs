@@ -10,6 +10,7 @@ screen = pygame.display.set_mode((game_over_image.get_width(),game_over_image.ge
 
 x = game_over_image.get_width() * -1
 y = 0
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -22,4 +23,4 @@ while True:
              x+= 20
 
         pygame.display.update()
-        pygame.time.delay(50)
+        clock.tick(30)

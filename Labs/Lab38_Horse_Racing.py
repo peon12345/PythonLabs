@@ -35,6 +35,7 @@ input_num = 0
 horse_current_frame_index = 0
 running = False
 width_horse = 90
+clock = pygame.time.Clock()
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -70,8 +71,8 @@ while True:
         screen.blit(fence_img,(0,450))
 
         #horses
-        max_speed = 18
-        min_speed = 4
+        max_speed = 10
+        min_speed = 1
         
         if running == False: 
             horses.append((0,50,random.randint(min_speed,max_speed)))
@@ -112,5 +113,5 @@ while True:
             input_num = 0
         else:
             pygame.display.update()
-            pygame.time.delay(100)
+            clock.tick(10)
         

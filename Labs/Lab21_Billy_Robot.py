@@ -23,6 +23,11 @@ text_D = font.render("D - right", False, (200, 100, 100))
 
 x = 8
 y = 10
+clock = pygame.time.Clock()
+
+w_rect = 15
+h_rect = 20
+
 while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -33,13 +38,13 @@ while True:
                  if y - 1 > 0:
                   y -= 1
              elif event.key == pygame.K_s:
-                  if y + 1 < h:
+                  if y + 1 <= h_rect:
                     y += 1
              elif event.key == pygame.K_a:
                  if x - 1 > 0:
                   x -= 1
              elif event.key == pygame.K_d:
-                 if x + 1 < w:
+                 if x + 1 <= w_rect:
                   x += 1
 
         screen.fill(Colors.BLACK)
@@ -53,4 +58,4 @@ while True:
         screen.blit(text_pos,(0,100))
 
         pygame.display.update()
-        pygame.time.delay(50)
+        clock.tick(14)

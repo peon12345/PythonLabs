@@ -44,7 +44,6 @@ def restart():
 
 font = pygame.font.SysFont('Comic Sans MS', 60)
 
-
 while True:
         input_letter = ''
         for event in pygame.event.get():
