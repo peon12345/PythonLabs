@@ -64,11 +64,11 @@ while True:
                 input_str_num += "0"
 
         if event.type != pygame.KEYDOWN:
-                pygame.time.delay(50)
+                pygame.time.delay(30)
                 continue
         else:
             if event.key != pygame.K_RETURN:
-                pygame.time.delay(50)
+                pygame.time.delay(30)
                 continue
         
 

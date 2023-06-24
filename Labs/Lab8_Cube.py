@@ -1,5 +1,4 @@
 import pygame
-import Colors
 pygame.init()
 
 print("Enter width cube and hue")

@@ -50,8 +50,8 @@ while True:
                 elif event.key == pygame.K_RIGHT:
                      x_rocket_move = rocket_step
                 elif event.key == pygame.K_UP:
-                     if len(rocket_bullets) < 10:
-                        rocket_bullets.append((x_rocket,y_rocket))
+                     if len(rocket_bullets) < 3:
+                        rocket_bullets.append((x_rocket+rocket_img.get_width()/2,y_rocket))
             
 
             elif event.type == pygame.KEYUP:
@@ -103,10 +103,14 @@ while True:
              x_bullet,y_bullet = rocket_bullets[i]
              enemies[:] = [(x,y) for (x,y)  in enemies if x_bullet <= x or y_bullet <= y or x_bullet >= x + enemy_img.get_width() or y_bullet > y + enemy_img.get_height()]
              new_len_enemies = len(enemies)
+             if new_len_enemies == 0:
+                  quit()
+                  
              if len_enemies != new_len_enemies:
                   #enemy dead,destroy bullet
                   y_bullet = -1
                   rocket_bullets[i] = x_bullet,y_bullet
+                  len_enemies = new_len_enemies
              else:
                   y_bullet -= bullet_step
                   rocket_bullets[i] = x_bullet,y_bullet

@@ -14,7 +14,7 @@ words.append("gun")
 words.append("uncle")
 
 
-w = 500
+w = 600
 h = 200
 screen = pygame.display.set_mode((w,h))
 
