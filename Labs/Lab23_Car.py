@@ -15,7 +15,7 @@ tree_img = pygame.image.load("Labs/res/Tree_1.png")
 tree_img = pygame.transform.scale(tree_img, (50, 100))
 
 bush_img = pygame.image.load("Labs/res/Bush.png")
-bush_img = pygame.transform.scale(bush_img, (30, 30))
+bush_img = pygame.transform.scale(bush_img, (75, 50))
 
 wheel = pygame.image.load("Labs/res/wheel.png")
 wheel = pygame.transform.scale(wheel, (37, 37))

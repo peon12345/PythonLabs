@@ -26,7 +26,7 @@ for r in range(3):
         x += x_interval
 
 x_rocket = w/2
-y_rocket = h - rocket_img.get_height() + 10
+y_rocket = h - rocket_img.get_height() - 10
 rocket_step = 40
 
 x_rocket_move = 0
@@ -58,8 +58,9 @@ while True:
                     x_rocket_move = 0
 
         screen.fill(Colors.BLACK)
-
-        x_rocket += x_rocket_move
+        if x_rocket +x_rocket_move > 0 and x_rocket +x_rocket_move + rocket_img.get_width() < w:
+             x_rocket += x_rocket_move
+        
         screen.blit(rocket_img,(x_rocket,y_rocket))
 
         

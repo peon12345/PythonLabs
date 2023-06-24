@@ -16,7 +16,6 @@ screen = pygame.display.set_mode((size_side,size_side))
 def draw_chessboard():
      black_rect_draw_turn = (n_rect % 2 == 0)
      screen.fill(Colors.WHITE)
-     print("redraw")
      x_pos = 0
      y_pos = 0
      for row in range(n_rect):

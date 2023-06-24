@@ -2,7 +2,7 @@ import pygame
 import Colors
 pygame.init()
 
-print("Enter size side and rect num: ")
+print("Enter width and number of circles: ")
 
 n = 2
 numbers = input().split()[:n]
